@@ -48,8 +48,7 @@ const IndexPage = () => (
     // 	<SEO title="Alex Larsen" />
 
     <Container fluid>
-	<Button variant="danger">Danger</Button>
-
+	<Button variant="warning">Button</Button>
 	<Row>
 	    <ProjectRow projects={project_data} />
 	</Row>
