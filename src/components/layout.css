@@ -610,6 +610,7 @@ pre tt:after {
 #main-container {
     background-color: blue;
     height: 100vh;
+    font-family: 'EB Garamond', serif;
 }
 
 #call-buttons {
