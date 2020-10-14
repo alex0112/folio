@@ -599,10 +599,42 @@ pre tt:after {
 
 .square {
     background-color: firebrick;
-    height: 10em;
-    width: 10em;
-    margin: 2px;
-    border-radius: 10px;
     min-width: 300px;
     max-width: 300px;
+    height: 300px;
+    margin-right: 1px;
+    margin-top: 1px;
+    border-radius: 5px;
 }
+
+#main-container {
+    background-color: blue;
+    height: 100vh;
+}
+
+#call-buttons {
+    position: fixed;
+    display: contents;
+    top: 500px;
+    left: 200px;
+}
+
+#hero { /* Shamelessly stolen from https://www.w3schools.com/howto/howto_css_parallax.asp */
+  /* The image used */
+    background-image: url("../images/edison_light.jpg");
+    
+  /* Set a specific height */
+  min-height: 100px;
+  height: 100vh;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-button {
+    position: fixed;
+}
+
