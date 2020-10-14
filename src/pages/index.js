@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import {Container, Row, Col, Button} from "react-bootstrap"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const project_data = [
     {
@@ -38,11 +38,10 @@ const project_data = [
     },
 ];
 
-const ProjectRow = () => (
-    <Row>
-	
-    </Row>
-)
+const ProjectRow = ({projects}) => {
+  return projects.map((project) =>
+	<Col xs={1} sm={2} md lg className="square">{project.name}</Col>);
+};
 
 const IndexPage = () => (
     // <Layout>
@@ -52,13 +51,11 @@ const IndexPage = () => (
 	<Button variant="danger">Danger</Button>
 
 	<Row>
-	    <Col xs={1} sm={2} md lg className="square">1 of 3</Col>
-	    <Col xs={1} sm={2} md lg className="square">1 of 3</Col>
-	    <Col xs={1} sm={2} md lg className="square">1 of 3</Col>
+	    <ProjectRow projects={project_data} />
 	</Row>
 
     </Container>
 //    </Layout>
 )
 
-export default IndexPage
+export default IndexPage;
