@@ -1,11 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import {Container, Row, Col, Button} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-awesome-button/dist/styles.css";
+
+import {Container, Row, Col} from "react-bootstrap";
+import { AwesomeButton } from "react-awesome-button";
 
 const project_data = [
     {
@@ -15,14 +14,14 @@ const project_data = [
 	page: "/yggdrasil",
     },
     {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
+	name: "Infocoin",
+	subtext: "Interact with an API and calculate the ROI on different cryptographic assets...",
 	img_path: '../images/yggdrasil.jpg',
 	page: "/yggdrasil",
     },
     {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
+	name: "Aurum",
+	subtext: "A small foray into the world of functional programming and HMAC authentication...",
 	img_path: '../images/yggdrasil.jpg',
 	page: "/yggdrasil",
     },
@@ -147,22 +146,22 @@ const ProjectTile = ({project}) => {
 	    </div>
 	</a>
     );
-}
+};
 
 const IndexPage = () => (
     // <Layout>
     // 	<SEO title="Alex Larsen" />
     <Container fluid id="main-container">
 	<Row id="hero" className="justify-content-center">
-	    <span id="call-buttons">
+	    <div id="call-buttons">
 		<Col xs={1} sm={2} md={2} lg={2}>
-		    <Button variant="warning" className="hero-button">Hire Me</Button>
+		    <AwesomeButton type="secondary">Hire Me</AwesomeButton>;
 		</Col>
 		
 		<Col xs={1} sm={2} md={2} lg={2}>
-		    <Button variant="warning" className="hero-button">See My Work</Button>
+		    <AwesomeButton type="secondary">See My Work</AwesomeButton>;
 		</Col>
-	    </span>
+	    </div>
 	</Row>
 
 	<Row id="projects" className="justify-content-center">

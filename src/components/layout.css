@@ -19,6 +19,15 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
   background: url("../images/greyzz.png");
+
+  min-height: 100px;
+  height: 100vh;
+    
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: tile;
+  
 }
 article,
 aside,
@@ -608,7 +617,6 @@ pre tt:after {
 }
 
 #main-container {
-    background-color: blue;
     height: 100vh;
     font-family: 'EB Garamond', serif;
 }
@@ -621,21 +629,43 @@ pre tt:after {
 }
 
 #hero { /* Shamelessly stolen from https://www.w3schools.com/howto/howto_css_parallax.asp */
-  /* The image used */
+    /* The image used */
     background-image: url("../images/edison_light.jpg");
     
-  /* Set a specific height */
-  min-height: 100px;
-  height: 100vh;
-  
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* Set a specific height */
+    min-height: 100px;
+    height: 100vh;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.hero-button {
-    position: fixed;
+.aws-btn {
+    --button-default-height: 48px;
+    --button-default-font-size: 14px;
+    --button-default-border-radius: 6px;
+    --button-horizontal-padding: 20px;
+    --button-raise-level: 5px;
+    --button-hover-pressure: 2;
+    --transform-speed: .185s;
+    --button-primary-color: #475472;
+    --button-primary-color-dark: #2a3143;
+    --button-primary-color-light: #d4d9e4;
+    --button-primary-color-hover: #424e6a;
+    --button-primary-border: none;
+    --button-secondary-color: #fffc00;
+    --button-secondary-color-dark: #b9b500;
+    --button-secondary-color-light: #6c6a00;
+    --button-secondary-color-hover: #fffb3e;
+    --button-secondary-border: none;
+    --button-anchor-color: #f3c8ad;
+    --button-anchor-color-dark: #734922;
+    --button-anchor-color-light: #4c3016;
+    --button-anchor-color-hover: #f1bfa0;
+    --button-anchor-border: 1px solid #8c633c;
 }
+
 
