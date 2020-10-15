@@ -1,7 +1,7 @@
 import React from "react"
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col, Button} from "react-bootstrap";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import {Container, Row, Col, Button} from "react-bootstrap";
 
 
 const project_data = [
@@ -129,9 +129,11 @@ const project_data = [
 
 const ProjectRow = ({projects}) => {
   return projects.map((project) =>
-      <Col xs={1} sm={2} md={3} lg={3} className="square">
-	  <ProjectTile project={project}/>
-      </Col>
+      // <Col xs={1} sm={2} md={3} lg={3} className="square">
+      // 	  <ProjectTile project={project}/>
+      // </Col>
+
+      <ProjectTile project={project}/>
   );
 };
 
@@ -147,22 +149,19 @@ const ProjectTile = ({project}) => {
 };
 
 const IndexPage = () => (
-    // <Layout>
-    // 	<SEO title="Alex Larsen" />
-    <Container fluid>
-	<Row id="hero">
-	    <Row>
-		<Col className="hero-col">
-		    <h1 className="hero-text">Alex Larsen</h1>
-		    <Button variant="warning" className="call-button">Hire Me</Button>
-		    <Button variant="warning" className="call-button">See My Work</Button>
-		</Col>
-	    </Row>
-	</Row>
-	<Row id="projects" className="justify-content-center">
-	    <ProjectRow projects={project_data} />
-	</Row>
-	</Container>
+    <div id="main">
+	<div id="hero-section" className="edison-paralax">
+	    <div id="hero-box">
+		<h1 className="hero-text">Alex Larsen</h1>
+		<button>Hire Me</button>
+		<button>See My Work</button>
+	    </div>
+	</div>
+	
+	<div id="project-grid">
+	    
+	</div>
+    </div>
 );
 
 export default IndexPage;
