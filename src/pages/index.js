@@ -1,10 +1,8 @@
 import React from "react"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "react-awesome-button/dist/styles.css";
+import {Container, Row, Col, Button} from "react-bootstrap";
 
-import {Container, Row, Col} from "react-bootstrap";
-import { AwesomeButton } from "react-awesome-button";
 
 const project_data = [
     {
@@ -151,24 +149,20 @@ const ProjectTile = ({project}) => {
 const IndexPage = () => (
     // <Layout>
     // 	<SEO title="Alex Larsen" />
-    <Container fluid id="main-container">
-	<Row id="hero" className="justify-content-center">
-	    <div id="call-buttons">
-		<Col xs={1} sm={2} md={2} lg={2}>
-		    <AwesomeButton type="secondary">Hire Me</AwesomeButton>;
+    <Container fluid>
+	<Row id="hero">
+	    <Row>
+		<Col className="hero-col">
+		    <h1 className="hero-text">Alex Larsen</h1>
+		    <Button variant="warning" className="call-button">Hire Me</Button>
+		    <Button variant="warning" className="call-button">See My Work</Button>
 		</Col>
-		
-		<Col xs={1} sm={2} md={2} lg={2}>
-		    <AwesomeButton type="secondary">See My Work</AwesomeButton>;
-		</Col>
-	    </div>
+	    </Row>
 	</Row>
-
 	<Row id="projects" className="justify-content-center">
 	    <ProjectRow projects={project_data} />
 	</Row>
-    </Container>
-//    </Layout>
-)
+	</Container>
+);
 
 export default IndexPage;
