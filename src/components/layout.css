@@ -20,8 +20,9 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 
+  /* background: url("../images/textured_stripes.png"); */
   /* background: url("../images/wood_1.png"); */
-  /* background: url("../images/dark_wood.png"); */
+  background: url("../images/dark_wood.png");
   /* background: url("../images/tileable_wood_texture.png"); */
   /* background: url("../images/greyzz.png"); */
   /* background: url("../images/light_wool.png"); */
