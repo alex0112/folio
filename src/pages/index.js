@@ -150,7 +150,7 @@ const ProjectTile = ({project}) => {
 
 const IndexPage = () => (
     <div id="main">
-	<div id="hero-section" className="edison-paralax">
+	<div id="hero-section" className="paralax">
 	    <div id="hero-box">
 		<h1 className="hero-text">Alex Larsen</h1>
 		<button>Hire Me</button>
@@ -158,7 +158,11 @@ const IndexPage = () => (
 	    </div>
 	</div>
 	
-	<div id="project-grid">
+	<div id="project-grid" className="paralax">
+	    
+	</div>
+
+	<div id="project-grid" className="paralax">
 	    
 	</div>
     </div>
