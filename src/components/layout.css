@@ -22,7 +22,10 @@ body {
 
   /* background: url("../images/textured_stripes.png"); */
   /* background: url("../images/wood_1.png"); */
-  background: url("../images/dark_wood.png");
+  /* background: url("../images/dark_wood.png"); */
+  /* background: url("../images/aged_wood.jpg"); */
+  background: url("../images/seeing-triple.jpg");
+  
   /* background: url("../images/tileable_wood_texture.png"); */
   /* background: url("../images/greyzz.png"); */
   /* background: url("../images/light_wool.png"); */
@@ -32,6 +35,7 @@ body {
   height: 100vh;
     
   /* Create the parallax scrolling effect */
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: tile;
@@ -663,7 +667,7 @@ pre tt:after {
     position: sticky;
     align-self: flex-start;
     top: 35vh;
-    left: 15vw;
+    left: 5vw;
     margin-bottom: 120px;
 }
 
