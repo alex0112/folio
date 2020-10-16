@@ -641,6 +641,9 @@ pre tt:after {
     /* Set a specific height */
     height: 125vh;
     clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
 }
 
 .hero-text {
@@ -671,6 +674,21 @@ pre tt:after {
     width: 200px;
     border-radius: 100px;
     font-family: "PT Mono", monospace;
+    
+}
+
+#hire-me {
+    animation-name: fadeInLater;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#see-my-work {
+    animation-name: fadeInEvenLater;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
 }
 
 #project-grid {
@@ -690,7 +708,6 @@ pre tt:after {
 
 
 /*** Animations ***/
-
 @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -702,3 +719,43 @@ pre tt:after {
         transform: translate(0);
     }
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLater {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+	opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInEvenLater {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+	opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
