@@ -645,11 +645,14 @@ pre tt:after {
 
 .hero-text {
     font-family: "EB Garamond", serif;
-    font-weight: 600;
+    font-weight: 300;
     /* color: #e6a440; */
     /* color: #fdf27a; */
     color: cornsilk;
     font-size: 75pt;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 #hero-box {
@@ -661,9 +664,17 @@ pre tt:after {
     margin-bottom: 120px;
 }
 
+.call-btn {
+    background-color: orange;
+    border: none;
+    height: 40px;
+    width: 200px;
+    border-radius: 100px;
+    font-family: "PT Mono", monospace;
+}
+
 #project-grid {
     min-height: 100vh;
-    
 }
 
 .paralax {
@@ -675,4 +686,19 @@ pre tt:after {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+/*** Animations ***/
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }

@@ -153,8 +153,8 @@ const IndexPage = () => (
 	<div id="hero-section" className="paralax">
 	    <div id="hero-box">
 		<h1 className="hero-text">Alex Larsen</h1>
-		<button>Hire Me</button>
-		<button>See My Work</button>
+		<button className="call-btn">Hire Me</button>
+		<button className="call-btn">See My Work</button>
 	    </div>
 	</div>
 	

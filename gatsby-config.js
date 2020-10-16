@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-	title: `Gatsby Default Starter`,
-	description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-	author: `@gatsbyjs`,
+	title: `Alex Larsen`,
+	description: `A small portfolio site.`,
+	author: `Alex Larsen`,
     },
     plugins: [
 	`gatsby-plugin-react-helmet`,
@@ -32,35 +32,9 @@ module.exports = {
 	    resolve: 'gatsby-plugin-web-font-loader',
 	    options: {
 		google: {
-		    families: [`EB Garamond`, `Libre Baskerville`, `Noto Serif`, `Piazzolla`]
+		    families: [`EB Garamond`, `Libre Baskerville`, `Noto Serif`, `Piazzolla`, `Press Start 2P`, `PT Mono`, `Anonymous Pro`, `Fredericka the Great`, `Rye`]
 		}
 	    }
 	},
-	// {
-	//     resolve: `gatsby-plugin-prefetch-google-fonts`,
-	//     options: {
-	// 	fonts: [
-	// 	    {
-	// 		family: `EB Garamond`,
-	// 		variants: [`400`, `500`, `600`,`700`]
-	// 	    },
-	// 	    {
-	// 		family: `Libre Baskerville`,
-	// 		variants: [`400`, `700`]
-	// 	    },
-	// 	    {
-	// 		family: `Noto Serif`,
-	// 		variants: []
-	// 	    },
-	// 	    {
-	// 		family: `Piazzolla`,
-	// 		variants: [`300`]
-	// 	    },
-	// 	],
-	//     },
-	//	}
-	// this (optional) plugin enables Progressive Web App + Offline functionality
-	// To learn more, visit: https://gatsby.dev/offline
-	// `gatsby-plugin-offline`,
     ],
 }
