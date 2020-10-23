@@ -158,8 +158,8 @@ const IndexPage = () => (
 	    <div id="hero-box">
 		<h1 className="hero-text">Alex Larsen</h1>
 		<button id="hire-me" className="call-btn">Hire Me</button>
-		<button id="see-my-work" className="call-btn">
-		    <a href="#projects">See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-hang"/>
+		<button id="see-my-work" className="call-btn hvr-icon-hang">
+		    <a href="#projects">See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-icon"/>
 		    </a>
 		    </button>
 	    </div>
