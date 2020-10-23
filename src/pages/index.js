@@ -1,7 +1,8 @@
-import React from "react"
+import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-scroll';
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import {Container, Row, Col, Button} from "react-bootstrap";
@@ -159,8 +160,8 @@ const IndexPage = () => (
 		<h1 className="hero-text">Alex Larsen</h1>
 		<button id="hire-me" className="call-btn">Hire Me</button>
 		<button id="see-my-work" className="call-btn hvr-icon-hang">
-		    <a href="#projects">See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-icon"/>
-		    </a>
+		    <Link to="projects" smooth={true} duration={1500}>See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-icon"/>
+		    </Link>
 		    </button>
 	    </div>
 	</div>
