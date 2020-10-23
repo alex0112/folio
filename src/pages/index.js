@@ -127,24 +127,26 @@ const project_data = [
     },
 ];
 
-const ProjectRow = ({projects}) => {
+const ProjectGrid = ({projects}) => {
   return projects.map((project) =>
       // <Col xs={1} sm={2} md={3} lg={3} className="square">
       // 	  <ProjectTile project={project}/>
       // </Col>
 
-      <ProjectTile project={project}/>
+      <div className="tile-row">
+	  <ProjectTile project={project}/>
+      </div>
   );
 };
 
 const ProjectTile = ({project}) => {
     return(
-	<a href={project.page}>
-	    <div>
+	<div className="">
+	    <a href={project.page}>
 		<h4>{project.name}</h4>
 		<p>{project.subtext}</p>
-	    </div>
-	</a>
+	    </a>
+	</div>
     );
 };
 
@@ -158,11 +160,12 @@ const IndexPage = () => (
 	    </div>
 	</div>
 	
-	<div id="project-grid" className="paralax">
-	    
+	<div id="projects">
+	    <h1 className="hero-text header-row">Projects I've Worked On</h1>
+	    <ProjectGrid projects={project_data} />
 	</div>
 
-	<div id="project-grid" className="paralax">
+	<div id="test" className="paralax">
 	    
 	</div>
     </div>

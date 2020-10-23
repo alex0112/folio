@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 html {
   -ms-text-size-adjust: 100%;
@@ -21,10 +24,10 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 
   /* background: url("../images/textured_stripes.png"); */
-  /* background: url("../images/wood_1.png"); */
+  background: url("../images/wood_1.png");
   /* background: url("../images/dark_wood.png"); */
   /* background: url("../images/aged_wood.jpg"); */
-  background: url("../images/seeing-triple.jpg");
+  /* background: url("../images/seeing-triple.jpg"); */
   
   /* background: url("../images/tileable_wood_texture.png"); */
   /* background: url("../images/greyzz.png"); */
@@ -617,16 +620,36 @@ pre tt:after {
   }
 }
 
-.square {
-    background-color: grey;
-    min-width: 300px;
-    max-width: 300px;
-    height: 300px;
-    margin-right: 1px;
-    margin-top: 1px;
-    border-radius: 5px;
-    color: black;
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hover Effects */
+.hvr-grow {
+    /* display: inline-block; */
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
 
 #main {
 }
@@ -640,13 +663,13 @@ pre tt:after {
 
     background-image: 
 	linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(106,106,106,0) 50%, rgba(0,0,0,0.6600841020001751) 100%),
-	url("../images/edison_light.jpg");
+	url("../images/edison_light_medium.jpg");
     
     /* Set a specific height */
     height: 125vh;
     clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
     animation-name: fadeIn;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-timing-function: ease-in;
 }
 
@@ -657,8 +680,8 @@ pre tt:after {
     /* color: #fdf27a; */
     color: cornsilk;
     font-size: 75pt;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
+    animation-name: fadeInLater; /* moveInLeft; */
+    animation-duration: 3s;
     animation-timing-function: ease-out;
 }
 
@@ -678,26 +701,55 @@ pre tt:after {
     width: 200px;
     border-radius: 100px;
     font-family: "PT Mono", monospace;
-    
+    box-shadow: 2px;
 }
 
 #hire-me {
-    animation-name: fadeInLater;
-    animation-duration: 4s;
+    animation-name: fadeInEvenLater;
+    animation-duration: 5s;
     animation-timing-function: ease-out;
     margin-right: 20px;
     margin-bottom: 10px;
 }
 
 #see-my-work {
-    animation-name: fadeInEvenLater;
-    animation-duration: 4s;
+    animation-name: fadeInEvenLaterThanLater;
+    animation-duration: 5s;
     animation-timing-function: ease-out;
 }
 
-#project-grid {
-    min-height: 100vh;
+#projects {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 20px;
+    /* grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
 }
+
+
+#project-grid {
+}
+
+.header-row {
+    grid-column: 4fr;
+}
+
+.tile-row {
+    grid-column: 1fr;
+}
+
+.square {
+    background-color: grey;
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+    margin-right: 1px;
+    margin-top: 1px;
+    border-radius: 5px;
+    color: blue;
+}
+
+
 
 .paralax {
     /* Shamelessly stolen from https://www.w3schools.com/howto/howto_css_parallax.asp */
@@ -709,7 +761,6 @@ pre tt:after {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 /*** Animations ***/
 @keyframes moveInLeft {
@@ -749,6 +800,20 @@ pre tt:after {
 }
 
 @keyframes fadeInEvenLater {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+	opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInEvenLaterThanLater {
     0% {
         opacity: 0;
     }
