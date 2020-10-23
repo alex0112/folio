@@ -1,8 +1,10 @@
 import React from "react"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import {Container, Row, Col, Button} from "react-bootstrap";
-
 
 const project_data = [
     {
@@ -156,7 +158,10 @@ const IndexPage = () => (
 	    <div id="hero-box">
 		<h1 className="hero-text">Alex Larsen</h1>
 		<button id="hire-me" className="call-btn">Hire Me</button>
-		<button id="see-my-work" className="call-btn">See My Work</button>
+		<button id="see-my-work" className="call-btn">
+		    <a href="#projects">See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-hang"/>
+		    </a>
+		    </button>
 	    </div>
 	</div>
 	
