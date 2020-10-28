@@ -130,16 +130,24 @@ const project_data = [
     },
 ];
 
-const ProjectGrid = ({projects}) => {
-  return projects.map((project) =>
-      // <Col xs={1} sm={2} md={3} lg={3} className="square">
-      // 	  <ProjectTile project={project}/>
-      // </Col>
+const ProjectsHeader = () => {
+    return(
+	<div id="project-grid-header">
+	    <h1>Projects I've Worked On</h1>
+	</div>
+    );
+};
 
-      <div className="tile-row">
-	  <ProjectTile project={project}/>
-      </div>
-  );
+const ProjectTiles = ({projects}) => {
+    return(
+	projects.map((project) =>
+	    <ProjectTile project={project}/>
+	)
+    );
+};
+
+const ProjectGrid = ({projects}) => {
+    return [<ProjectsHeader />].concat(<ProjectTiles projects={projects} />);
 };
 
 const ProjectTile = ({project}) => {
@@ -164,7 +172,7 @@ const HeroBox = () => {
 	    </button>
 	</div>
     );
-}
+};
 
 const IndexPage = () => (
     <main>
@@ -173,7 +181,6 @@ const IndexPage = () => (
 	</section>
 	
 	<section id="projects">
-	    <h1 className="hero-text header-row">Projects I've Worked On</h1>
 	    <ProjectGrid projects={project_data} />
 	</section>
     </main>
