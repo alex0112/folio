@@ -153,28 +153,30 @@ const ProjectTile = ({project}) => {
     );
 };
 
-const IndexPage = () => (
-    <div id="main">
-	<div id="hero-section" className="paralax">
-	    <div id="hero-box">
-		<h1 className="hero-text">Alex Larsen</h1>
-		<button id="hire-me" className="call-btn">Hire Me</button>
-		<button id="see-my-work" className="call-btn hvr-icon-hang">
-		    <Link to="projects" smooth={true} duration={1500}>See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-icon"/>
-		    </Link>
-		    </button>
-	    </div>
+const HeroBox = () => {
+    return(
+	<div id="hero-box">
+	    <h1 className="hero-text">Alex Larsen</h1>
+	    <button id="hire-me" className="call-btn">Hire Me</button>
+	    <button id="see-my-work" className="call-btn hvr-icon-hang">
+		<Link to="projects" smooth={true} duration={1500}>See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-icon"/>
+		</Link>
+	    </button>
 	</div>
+    );
+}
+
+const IndexPage = () => (
+    <main>
+	<section id="hero-section" className="paralax">
+	    <HeroBox />
+	</section>
 	
-	<div id="projects">
+	<section id="projects">
 	    <h1 className="hero-text header-row">Projects I've Worked On</h1>
 	    <ProjectGrid projects={project_data} />
-	</div>
-
-	<div id="test" className="paralax">
-	    
-	</div>
-    </div>
+	</section>
+    </main>
 );
 
 export default IndexPage;
