@@ -165,11 +165,13 @@ const HeroBox = () => {
     return(
 	<div id="hero-box">
 	    <h1 className="hero-text">Alex Larsen</h1>
-	    <button id="hire-me" className="call-btn">Hire Me</button>
-	    <button id="see-my-work" className="call-btn hvr-icon-hang">
-		<Link to="projects" smooth={true} duration={1500}>See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-icon"/>
-		</Link>
-	    </button>
+	    <div id="call-btns">
+		<button id="hire-me" className="call-btn">Hire Me</button>
+		<button id="see-my-work" className="call-btn hvr-icon-hang">
+		    <Link to="projects" smooth={true} duration={1500}>See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-icon"/>
+		    </Link>
+		</button>
+	    </div>
 	</div>
     );
 };

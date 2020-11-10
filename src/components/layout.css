@@ -645,6 +645,12 @@ pre tt:after {
     animation-timing-function: ease-in;
 }
 
+@media(max-width: 1000px) {
+    #hero-section {
+	clip-path: inherit;
+    }
+}
+
 .hero-text {
     font-family: "EB Garamond", serif;
     font-weight: 300;
@@ -655,6 +661,7 @@ pre tt:after {
     animation-name: fadeInLater; /* moveInLeft; */
     animation-duration: 3s;
     animation-timing-function: ease-out;
+    text-align: center;
 }
 
 #hero-box {
@@ -674,14 +681,32 @@ pre tt:after {
     border-radius: 100px;
     font-family: "PT Mono", monospace;
     box-shadow: 2px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#call-btns {
+    display: flex;
+    flex-direction: row;
+}
+
+@media(max-width: 1000px) {
+    #call-btns {
+	flex-direction: column;
+	align-items: center;
+    }
+    
+    .call-btn {
+	width: 95%;
+	margin-top: 10px;
+	margin-left: 0px;
+    }
 }
 
 #hire-me {
     animation-name: fadeInEvenLater;
     animation-duration: 5s;
     animation-timing-function: ease-out;
-    margin-right: 20px;
-    margin-bottom: 10px;
 }
 
 #see-my-work {
