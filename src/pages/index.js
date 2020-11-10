@@ -4,9 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import {Container, Row, Col, Button} from "react-bootstrap";
-
 const project_data = [
     {
 	name: "Yggdrasil",
