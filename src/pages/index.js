@@ -1,173 +1,34 @@
 import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-scroll';
-
-const project_data = [
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Infocoin",
-	subtext: "Interact with an API and calculate the ROI on different cryptographic assets...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Aurum",
-	subtext: "A small foray into the world of functional programming and HMAC authentication...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-    {
-	name: "Yggdrasil",
-	subtext: "Yggdrasil is a fun little side project I've been working on for...",
-	img_path: '../images/yggdrasil.jpg',
-	page: "/yggdrasil",
-    },
-];
-
-const ProjectsHeader = () => {
-    return(
-	<div id="project-grid-header">
-	    <h1>Projects I've Worked On</h1>
-	</div>
-    );
-};
-
-const ProjectTiles = ({projects}) => {
-    return(
-	projects.map((project) =>
-	    <ProjectTile project={project}/>
-	)
-    );
-};
-
-const ProjectGrid = ({projects}) => {
-    return [<ProjectsHeader />].concat(<ProjectTiles projects={projects} />);
-};
-
-const ProjectTile = ({project}) => {
-    return(
-	<div className="">
-	    <a href={project.page}>
-		<h4>{project.name}</h4>
-		<p>{project.subtext}</p>
-	    </a>
-	</div>
-    );
-};
-
 const HeroBox = () => {
     return(
 	<div id="hero-box">
 	    <h1 className="hero-text">Alex Larsen</h1>
 	    <div id="call-btns">
-		<button id="hire-me" className="call-btn">Hire Me</button>
-		<button id="see-my-work" className="call-btn hvr-icon-hang">
-		    <Link to="projects" smooth={true} duration={1500}>See My Work <FontAwesomeIcon icon={faChevronDown} className="hvr-icon"/>
-		    </Link>
-		</button>
+
+		<a href="/hire-me" className="hvr-float">
+		    <button id="hire-me" className="call-btn">
+			Hire Me
+		    </button>
+		</a>
+
+		<a href="https://github.com/alex0112" className="hvr-shrink">
+		    <button id="see-my-work" className="call-btn">
+			See My Work 
+		    </button>
+		</a>
+
+		<a href="https://www.linkedin.com/in/alex-larsen-a581808b/" className="hvr-sink"> 
+		    <button id="view-linkedin" className="call-btn">
+			View LinkedIn
+		    </button>
+		</a>
+
+		<a href="/contact" className="hvr-grow">
+		    <button id="contact-me" className="call-btn">
+			Contact Me
+		    </button>
+		</a>
 	    </div>
 	</div>
     );
@@ -175,12 +36,12 @@ const HeroBox = () => {
 
 const IndexPage = () => (
     <main>
-	<section id="hero-section" className="paralax">
+	<section id="hero-section" className="">
 	    <HeroBox />
 	</section>
 	
 	<section id="projects">
-	    <ProjectGrid projects={project_data} />
+	    
 	</section>
     </main>
 );
