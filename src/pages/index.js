@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCodeBranch, faFeatherPointed, faDollarSign} from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const HeroBox = () => {
     return(
@@ -8,25 +11,25 @@ const HeroBox = () => {
 
 		<a href="/hire-me" className="hvr-float">
 		    <button id="hire-me" className="call-btn">
-			Hire Me
+			Hire Me <FontAwesomeIcon icon={faDollarSign} />
 		    </button>
 		</a>
 
 		<a href="https://github.com/alex0112" className="hvr-shrink">
 		    <button id="see-my-work" className="call-btn">
-			See My Work 
+			See My Work <FontAwesomeIcon icon={faCodeBranch} />
 		    </button>
 		</a>
 
-		<a href="https://www.linkedin.com/in/alex-larsen-a581808b/" className="hvr-sink"> 
+		<a href="https://www.linkedin.com/in/kingsfoil" className="hvr-sink"> 
 		    <button id="view-linkedin" className="call-btn">
-			View LinkedIn
+			LinkedIn <FontAwesomeIcon icon={faLinkedin} size="xl" />
 		    </button>
 		</a>
 
 		<a href="/contact" className="hvr-grow">
 		    <button id="contact-me" className="call-btn">
-			Contact Me
+			Contact <FontAwesomeIcon icon={faFeatherPointed} />
 		    </button>
 		</a>
 	    </div>
