@@ -950,4 +950,9 @@ pre tt:after {
 #not-found-text {
     color: cornsilk;
     font-family: "Futura", serif;    
+    text-align: center;
+    animation-name: fadeInEvenLater; /* moveInLeft; */
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+
 }
