@@ -867,7 +867,6 @@ pre tt:after {
     }
 }
 
-
 /*** Hover Animations from https://ianlunn.github.io/Hover/ ***/
 
 /* Grow */
@@ -940,4 +939,16 @@ pre tt:after {
 .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
+}
+
+
+/* For the 404 Page */
+
+#404-title {
+    
+}
+
+#404-text {
+    color: cornsilk;
+    font-family: "EB Garamond", serif;    
 }
