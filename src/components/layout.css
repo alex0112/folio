@@ -943,6 +943,10 @@ pre tt:after {
 
 
 /* For the 404 Page */
+#not-found-container {
+    overflow: hidden;
+    margin-top: 50vh;
+}
 
 #not-found-title {
 }
