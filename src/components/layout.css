@@ -944,11 +944,10 @@ pre tt:after {
 
 /* For the 404 Page */
 
-#404-title {
-    
+#not-found-title {
 }
 
-#404-text {
+#not-found-text {
     color: cornsilk;
-    font-family: "EB Garamond", serif;    
+    font-family: "Futura", serif;    
 }
